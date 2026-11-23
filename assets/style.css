@@ -1,0 +1,166 @@
+/* Agrarökologie-Lehrpfad Emmental – gemeinsames Stylesheet */
+:root {
+  --erde: #3b2f25;
+  --erde-hell: #6b5a4a;
+  --wiese: #3f6b3a;
+  --wiese-hell: #e7efe1;
+  --korn: #c8a24a;
+  --papier: #faf7f0;
+  --linie: #ddd3c2;
+  --max: 42rem;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--erde);
+  background: var(--papier);
+}
+
+a { color: var(--wiese); text-underline-offset: 0.15em; }
+a:focus-visible, summary:focus-visible { outline: 3px solid var(--korn); outline-offset: 2px; }
+
+.kopf {
+  background: var(--wiese);
+  color: #fff;
+  padding: 1.25rem 1.25rem 1.5rem;
+}
+.kopf a { color: #fff; }
+.kopf .marke {
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.9;
+  text-decoration: none;
+}
+.kopf h1 {
+  margin: 0.4rem 0 0.2rem;
+  font-size: 1.9rem;
+  line-height: 1.2;
+}
+.kopf .thema { margin: 0; font-size: 1.05rem; opacity: 0.95; }
+
+.postennr {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem; height: 2.4rem;
+  border-radius: 50%;
+  background: var(--korn);
+  color: var(--erde);
+  font-weight: 700;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+main {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin: 2rem 0 0.5rem;
+  color: var(--wiese);
+}
+
+.kasten {
+  background: var(--wiese-hell);
+  border-left: 5px solid var(--wiese);
+  padding: 0.9rem 1rem;
+  border-radius: 0 8px 8px 0;
+  margin: 1rem 0;
+}
+
+details {
+  background: #fff;
+  border: 1px solid var(--linie);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  margin: 1rem 0;
+}
+summary { cursor: pointer; font-weight: 600; }
+details[open] summary { margin-bottom: 0.5rem; }
+
+ul.links { padding-left: 1.2rem; }
+ul.links li { margin: 0.35rem 0; }
+
+.platzhalter {
+  border: 2px dashed var(--linie);
+  border-radius: 8px;
+  padding: 1rem;
+  color: var(--erde-hell);
+  font-style: italic;
+}
+
+/* Übersicht auf der Startseite */
+.route { list-style: none; padding: 0; margin: 1rem 0; }
+.route li { margin: 0; }
+.route a {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.9rem 0.25rem;
+  border-bottom: 1px solid var(--linie);
+  text-decoration: none;
+  color: var(--erde);
+}
+.route a:hover .ort { text-decoration: underline; }
+.route .postennr { flex: none; margin: 0; }
+.route .ort { display: block; font-weight: 700; color: var(--wiese); }
+.route .was { display: block; font-size: 0.98rem; color: var(--erde-hell); }
+
+/* Navigation zwischen den Posten */
+.weiter {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 2.5rem 0 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--linie);
+  font-size: 1rem;
+}
+.weiter a { text-decoration: none; font-weight: 600; }
+
+footer {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 1rem 1.25rem 2rem;
+  font-size: 0.9rem;
+  color: var(--erde-hell);
+}
+
+/* QR-Druckseite */
+.qr-raster {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+.qr-karte {
+  background: #fff;
+  border: 1px solid var(--linie);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  break-inside: avoid;
+}
+.qr-karte svg { width: 100%; max-width: 13rem; height: auto; }
+.qr-karte .url { font-size: 0.75rem; word-break: break-all; color: var(--erde-hell); }
+.qr-karte button { margin-top: 0.5rem; font: inherit; font-size: 0.9rem; padding: 0.4rem 0.8rem; cursor: pointer; }
+
+@media print {
+  .kopf, .nicht-drucken, footer { display: none; }
+  body { background: #fff; }
+  main { max-width: none; }
+  .qr-raster { grid-template-columns: repeat(2, 1fr); }
+  .qr-karte button { display: none; }
+}
+
+.kasten p { margin: 0.4rem 0 0; }

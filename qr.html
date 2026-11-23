@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QR-Codes – Agrarökologie-Lehrpfad Emmental</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="kopf">
+<a class="marke" href="./">Agrarökologie-Lehrpfad Emmental</a>
+<h1>QR-Codes zum Drucken</h1>
+</header>
+<main>
+<p class="nicht-drucken">Diese Seite erzeugt die QR-Codes automatisch mit der Adresse, unter der
+die Website gerade läuft. Öffne sie deshalb erst <strong>nach dem Veröffentlichen</strong> (bzw. nachdem
+die eigene Domain eingerichtet ist). Drucken mit Ctrl/Cmd + P, oder einzelne Codes als SVG herunterladen.</p>
+<div class="qr-raster" id="raster"></div>
+<script src="assets/qrcode.js"></script>
+<script>
+const posten = [
+  {nr: 1, ort: "Burgdorf"},
+  {nr: 2, ort: "Bach bei Oberburg"},
+  {nr: 3, ort: "Mänziwilegg"},
+  {nr: 4, ort: "Moosegg"},
+  {nr: 5, ort: "Zollbrück"},
+  {nr: 6, ort: "Langnau"}
+];
+const basis = location.href.replace(/qr\.html.*$/, "");
+const raster = document.getElementById("raster");
+for (const p of posten) {
+  const url = basis + "p" + p.nr + "/";
+  const qr = qrcode(0, "M");
+  qr.addData(url);
+  qr.make();
+  const svg = qr.createSvgTag({cellSize: 8, margin: 4, scalable: true});
+  const karte = document.createElement("div");
+  karte.className = "qr-karte";
+  karte.innerHTML = '<h2>Posten ' + p.nr + ': ' + p.ort + '</h2>' + svg +
+    '<p class="url">' + url + '</p><button type="button">SVG herunterladen</button>';
+  karte.querySelector("button").addEventListener("click", () => {
+    const blob = new Blob([svg], {type: "image/svg+xml"});
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "qr-posten-" + p.nr + ".svg";
+    a.click();
+  });
+  raster.appendChild(karte);
+}
+</script>
+</main>
+<footer>
+<a href="">Übersicht aller Posten</a> · Agrarökologie-Lehrpfad Emmental
+</footer>
+</body>
+</html>
