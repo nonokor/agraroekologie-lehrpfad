@@ -5,6 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Posten 1: Burgdorf – Agrarökologie-Lehrpfad Emmental</title>
 <link rel="stylesheet" href="../assets/style.css">
+<style>
+/* nur für diese Seite */
+.kette{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center;margin:1rem 0;font-size:.95rem}
+.kette span{background:var(--wiese-hell);border:1px solid #cfdcc6;border-radius:999px;padding:.3rem .75rem;font-weight:600;color:var(--wiese)}
+.kette i{font-style:normal;color:var(--erde-hell)}
+.zahlen{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:.8rem;margin:1rem 0}
+.zahl{background:#fff;border:1px solid var(--linie);border-radius:10px;padding:.9rem 1rem}
+.zahl strong{display:block;font-size:1.7rem;line-height:1.1;color:var(--wiese)}
+.zahl p{margin:.35rem 0 .2rem;font-size:.98rem}
+.zahl small{color:var(--erde-hell);font-size:.8rem}
+.stufe{margin:1.2rem 0 .3rem;font-weight:700;color:var(--erde)}
+.karte-rahmen{position:relative;width:100%;aspect-ratio:4/3;border:1px solid var(--linie);border-radius:10px;overflow:hidden;background:#fff}
+.karte-rahmen iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+</style>
 </head>
 <body>
 <header class="kopf">
@@ -21,33 +35,109 @@ Und wer verbindet die Höfe im Tal mit den Tellern in der Stadt?</p>
 
 <div class="kasten">
 <strong>Beobachte hier</strong>
-<p>Achte auf Orte, an denen regionale Lebensmittel gekauft werden könen. Gibt es 
-Orte an denen Lebensmittel getauscht oder gerettet werden können? Es gibt Initiativen in Burgdorf, die an genau diesen Punkten ansetzen.</p>
+<p>Achte auf Orte, an denen regionale Lebensmittel gekauft werden können. Gibt es
+Orte, an denen Lebensmittel getauscht oder gerettet werden? Es gibt Initiativen in Burgdorf, die genau hier ansetzen.</p>
 </div>
 
-<h2>Initiativen in Burgdorf</h2>
+<h2>Was ist ein Ernährungssystem?</h2>
+<p>Bevor ein Rüebli auf dem Teller liegt, geht es durch viele Hände. Das Ernährungssystem umfasst alle
+Schritte und alle Menschen, die daran beteiligt sind:</p>
+<div class="kette" aria-label="Stufen des Ernährungssystems">
+  <span>Anbau</span><i>→</i><span>Verarbeitung</span><i>→</i><span>Handel</span><i>→</i><span>Essen</span><i>→</i><span>Reste</span>
+</div>
+<p>Dazu gehören auch die Regeln, Preise und Gewohnheiten, die bestimmen, was angebaut und gegessen wird.
+Die Agrarökologie schaut auf dieses ganze System, nicht nur auf das Feld.</p>
+
+<h2>Ein paar Zahlen zum Staunen</h2>
+<div class="zahlen">
+  <div class="zahl"><strong>30&nbsp;%</strong>
+    <p>der Umweltbelastung durch unseren Konsum stammen von der Ernährung. Das ist mehr als vom Wohnen oder von der Mobilität.</p>
+    <small>Quelle: <a href="https://www.bafu.admin.ch/dam/de/sd-web/7VTmDI0QIczG/schlussbericht_umweltfussabdruecke_schweiz.pdf">BAFU, Umwelt-Fussabdrücke der Schweiz, 2026</a></small></div>
+  <div class="zahl"><strong>2 von 3</strong>
+    <p>Teilen dieser Umweltbelastung entstehen im Ausland, also dort, wo unsere importierten Lebensmittel und Futtermittel herkommen.</p>
+    <small>Quelle: <a href="https://www.bafu.admin.ch/de/auswirkungen-der-ernaehrung-auf-die-umwelt">BAFU, Auswirkungen der Ernährung auf die Umwelt</a></small></div>
+  <div class="zahl"><strong>42&nbsp;%</strong>
+    <p>der Kalorien, die wir essen, produziert die Schweiz selbst (netto, 2024). Bei pflanzlichen Lebensmitteln waren es nur 31&nbsp;%.</p>
+    <small>Quelle: Agristat, via <a href="https://www.srf.ch/news/schweiz/ernaehrungsinitiative-selbstversorgungsgrad-kalorien-bestimmen-den-wert">SRF</a></small></div>
+  <div class="zahl"><strong>2,8 Mio. t</strong>
+    <p>Lebensmittel gehen wegen unseres Konsums jedes Jahr verloren. Vermeidbare Verluste verursachen rund einen Viertel der Umweltbelastung der Ernährung.</p>
+    <small>Quelle: <a href="https://www.bafu.admin.ch/de/foodwaste">BAFU, Food Waste</a></small></div>
+  <div class="zahl"><strong>8755</strong>
+    <p>Landwirtschaftsbetriebe gab es 2025 im Kanton Bern. Zehn Jahre zuvor waren es noch rund 1500 mehr.</p>
+    <small>Quelle: <a href="https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/jahresbericht/2025/2025_Digitaler%20Jahresbericht%20LANAT%20-%20ADZ.pdf">LANAT Kanton Bern, Jahresbericht 2025</a></small></div>
+  <div class="zahl"><strong>9500</strong>
+    <p>Höfe in der Schweiz verkaufen direkt an Konsumentinnen und Konsumenten, zum Beispiel im Hofladen oder auf dem Markt (2023).</p>
+    <small>Quelle: <a href="https://dam-api.bfs.admin.ch/hub/api/dam/assets/36632459/master">BFS, Taschenstatistik Landwirtschaft 2026</a></small></div>
+</div>
+
+<h2>Initiativen in und um Burgdorf</h2>
+<p>Für jede Stufe des Ernährungssystems gibt es in Burgdorf Menschen, die etwas anders machen:</p>
+
+<p class="stufe">Anbau</p>
 <ul class="links">
-  <li><a href="https://burgdorf-im-wandel.ch/portfolio/foodwaste/">Burgdorf im Wandel: Foodwaste</a></li>
-  <li>RestessBar <!-- TEXT/LINK ERGÄNZEN --></li>
-  <li>Foodsave-Bankett <!-- TEXT/LINK ERGÄNZEN --></li>
-  <li>Urban Gardening <!-- TEXT/LINK ERGÄNZEN --></li>
-  <li><a href="https://aemmeshrimp.ch">Aemmeshrimp</a></li>
-  <li>Hasle-Mühle <!-- TEXT/LINK ERGÄNZEN --></li>
-  <li><a href="https://www.integral-bioladen.ch/sortiment/">Integral Bioladen</a></li>
-  <li>Wochenmarkt Burgdorf (Donnerstag und Samstag)</li>
-  <li><a href="https://landlicht-burgdorf.ch/">Landlicht Burgdorf</a></li>
+  <li><a href="https://www.myfarm.ch/en/farm-shops/hofladen-hasle-muehle_A5wsffG">Hasle-Mühle</a>: Bio-Familienbetrieb mit Hofladen zwischen Oberburg und Hasle; verkauft auch Produkte anderer Höfe.</li>
+  <li><a href="https://aemmeshrimp.ch">Aemme Shrimp</a>: Crevetten aus Burgdorf statt aus Übersee, mit Hofladen und Stallvisiten.</li>
+  <li>Gemüsegarten Kosmoos (Butikofen bei Kirchberg): Gemüsebau, Partner von Burgdorf im Wandel.</li>
+  <li><a href="https://www.burgdorf.ch/wAssets/docs/Verwaltung/Sozialdirektion/Flyer_UrbanGardening_A4.pdf">Urban Gardening</a>: Die Stadt stellt Flächen zur Verfügung, auf denen Bewohnerinnen und Bewohner gärtnern.</li>
 </ul>
+
+<p class="stufe">Handel</p>
+<ul class="links">
+  <li>Wochenmarkt in der Oberstadt, jeden Donnerstag und Samstag.</li>
+  <li><a href="https://landlicht-burgdorf.ch/">Landlicht</a>: Hofladen mitten in der Stadt mit Gemüsekiste; ausgeliefert per Velo von der Stiftung intact.</li>
+  <li><a href="https://www.integral-bioladen.ch/">Integral Bioladen</a>: Bioladen, als Genossenschaft organisiert.</li>
+</ul>
+
+<p class="stufe">Reste</p>
+<ul class="links">
+  <li><a href="https://burgdorf-im-wandel.ch/portfolio/restessbar/">RestEssBar</a>: Hier werden übrig gebliebene Lebensmittel gerettet und weitergegeben.</li>
+  <li><a href="https://burgdorf-im-wandel.ch/portfolio/madamefrigo/">Madame Frigo</a>: öffentliche Kühlschränke zum Teilen von Lebensmitteln.</li>
+  <li><a href="https://burgdorf-im-wandel.ch/portfolio/foodsavebankett-burgdorf/">Foodsave-Bankett</a>: 2024 ein Essen für rund 400 Personen, gekocht aus geretteten Lebensmitteln.</li>
+  <li><a href="https://www.tischlein.ch">Tischlein deck dich</a>: gibt gerettete Lebensmittel an Menschen mit wenig Geld ab.</li>
+</ul>
+<p>Viele dieser Projekte sind über den Verein <a href="https://burgdorf-im-wandel.ch">Burgdorf im Wandel</a> miteinander verbunden.</p>
+
 <h2>Wer hängt mit wem zusammen?</h2>
-<iframe src="https://embed.kumu.io/4270130d1830ddf4a296484968e9d4bc" width="940" height="600" frameborder="0"></iframe>
+<p>Die Karte zeigt Akteurinnen und Akteure des Ernährungssystems in Burgdorf und im Emmental und ihre Beziehungen.
+Klick auf einen Punkt, um mehr zu erfahren.</p>
+<div class="karte-rahmen">
+  <iframe src="https://embed.kumu.io/4270130d1830ddf4a296484968e9d4bc" title="Kumu-Karte Ernährungssystem Burgdorf und Emmental" loading="lazy"></iframe>
+</div>
+
+<h2>Was hat das mit Agrarökologie zu tun?</h2>
+<p>Die Welternährungsorganisation FAO beschreibt Agrarökologie mit zehn Elementen. Einige davon kannst du hier in der Stadt entdecken:</p>
+<ul>
+  <li><strong>Kreisläufe schliessen:</strong> Gerettete Lebensmittel landen auf dem Teller statt im Abfall.</li>
+  <li><strong>Kreislauf- und Solidarwirtschaft:</strong> Hofläden, Märkte und Gemüsekisten verkürzen den Weg vom Hof zu den Menschen. So kann ein grösserer Teil des Preises bei den Bäuerinnen und Bauern bleiben.</li>
+  <li><strong>Wissen gemeinsam schaffen:</strong> In Initiativen wie Burgdorf im Wandel lernen Menschen voneinander.</li>
+  <li><strong>Kultur und Esstraditionen:</strong> Auf dem Wochenmarkt treffen sich Stadt und Land.</li>
+</ul>
+<p>Mehr zur Agrarökologie erfährst du an <a href="../p2/">Posten 2</a>.</p>
+
 <details>
-  
-<summary>Frage: Welche dieser Initiativen kanntest du schon, und welche würdest du selbst nutzen? Gibt es ähnliche Initiativen, in deiner Heimatregion?</summary>
+<summary>Frage: Welche dieser Initiativen kanntest du schon, und welche würdest du selbst nutzen? Gibt es ähnliche Initiativen in deiner Heimatregion?</summary>
 <p>Hier gibt es kein Richtig oder Falsch. Notiere dir eine Initiative, die du ausprobieren möchtest.</p>
 </details>
 
+<details>
+<summary>Frage: Warum kann die Schweiz nicht einfach alles selbst produzieren, was sie isst?</summary>
+<p>Ein grosser Teil der Fläche eignet sich nur als Wiese oder Weide, etwa im hügeligen Emmental. Darauf wächst Gras für Kühe, aber kaum Getreide oder Gemüse.
+Zudem essen wir viele Lebensmittel, die hier nicht wachsen (Kaffee, Bananen, Reis), und ein Teil des Tierfutters wird importiert.
+Weniger Food Waste und eine stärker pflanzliche Ernährung würden helfen, mit der eigenen Fläche mehr Menschen zu ernähren.</p>
+</details>
+
+<div class="kasten">
+<strong>Selbst ausprobieren</strong>
+<p>Kauf heute etwas auf dem Markt oder im Hofladen und frag nach, woher es kommt. Oder schau beim nächsten Einkauf,
+welche Lebensmittel aus der Region stammen und welche weit gereist sind.</p>
+</div>
+
 <h2>Mehr erfahren</h2>
 <ul class="links">
-  <li><a href="https://alexandria.unisg.ch/server/api/core/bitstreams/51e89ffd-5618-48d5-9dad-e8e8634f91a7/content">Studie Universität St. Gallen (PDF)</a></li>
+  <li><a href="https://www.bafu.admin.ch/de/foodwaste">BAFU: Lebensmittelverluste in der Schweiz</a></li>
+  <li><a href="https://www.bafu.admin.ch/de/ernaehrung-und-umwelt-hebel-und-ansaetze">BAFU: Ernährung und Umwelt – Hebel und Ansätze</a></li>
+  <li><a href="https://www.fao.org/agroecology/overview/10-elements/en">FAO: Die 10 Elemente der Agrarökologie (Englisch)</a></li>
+  <li><a href="https://alexandria.unisg.ch/server/api/core/bitstreams/51e89ffd-5618-48d5-9dad-e8e8634f91a7/content">Universität St. Gallen: Vorstudie Regionalmarketing Emmental (2005, PDF)</a></li>
 </ul>
 
 <nav class="weiter" aria-label="Posten-Navigation">
