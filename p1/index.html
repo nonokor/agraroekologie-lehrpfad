@@ -7,9 +7,11 @@
 <link rel="stylesheet" href="../assets/style.css">
 <style>
 /* nur für diese Seite */
-.kette{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center;margin:1rem 0;font-size:.95rem}
-.kette span{background:var(--wiese-hell);border:1px solid #cfdcc6;border-radius:999px;padding:.3rem .75rem;font-weight:600;color:var(--wiese)}
+.kette{display:flex;flex-wrap:wrap;justify-content:center;gap:.3rem .25rem;align-items:center;margin:1rem 0;font-size:clamp(.72rem,2.6vw,.9rem)}
+.kette span{background:var(--wiese-hell);border:1px solid #cfdcc6;border-radius:999px;padding:.25rem .55rem;font-weight:600;color:var(--wiese);white-space:nowrap}
 .kette i{font-style:normal;color:var(--erde-hell)}
+.kette .umbruch{display:none}
+@media (max-width:640px){.kette .umbruch{display:block;flex-basis:100%;height:0}}
 .zahlen{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:.8rem;margin:1rem 0}
 .zahl{background:#fff;border:1px solid var(--linie);border-radius:10px;padding:.9rem 1rem}
 .zahl strong{display:block;font-size:1.7rem;line-height:1.1;color:var(--wiese)}
@@ -31,7 +33,7 @@
 <h2>Darum geht's</h2>
 <p>Dein Weg beginnt am Ende der Reise eines Lebensmittels, nämlich hier in der Stadt. Hier wird ein Teil dessen gegessen,
 was im Emmental wächst. Die Menschen in Burgdorf kaufen an verschiedenen Orten ein, haben unterschiedliche Beziehungen zu Lebensmitteln und bauen vielleicht sogar ihr eigenes Gemüse an. Die Stadt ist also ein wichtiger Teil des Ernährungssystems. 
-Weisst du eigentlcih, was mit Lebensmitteln passiert, die übrig bleiben?</p>
+Aber weisst du eigentlcih, was mit Lebensmitteln passiert, die übrig bleiben?</p>
 
 <div class="kasten">
 <strong>Beobachte hier</strong>
@@ -43,7 +45,7 @@ Orte, an denen Lebensmittel getauscht oder gerettet werden? Es gibt Initiativen 
 <p>Bevor ein Rüebli auf deinem Teller liegt, hat es viele Stationen durchlaufen. Das Ernährungssystem umfasst alle
 Schritte und alle Menschen, die daran beteiligt sind:</p>
 <div class="kette" aria-label="Stufen des Ernährungssystems">
-  <span>Anbau</span><i>→<span>Handel</span></i>→<span>Verarbeitung</span><i>→</i><span>Verkauf</span><i>→</i><span>Verbraucher*innen</span><i>→</i><span>Lebensmittel-Reste</span>
+  <span>Anbau</span><i>→</i><span>Handel</span><i>→</i><span>Verarbeitung</span><i>→</i><b class="umbruch"></b><span>Einzelhandel</span><i>→</i><span>Verbraucher*innen</span><i>→</i><span>Lebensmittel-Reste</span>
 </div>
 <p>Zum Ernährungssystem gehören auch die Gesetzte, Preise und Essgewohnheiten der Menschen. Alles beeinflusst was angebaut und schlussendlich auch gegessen wird. 
   Die Agrarökologie betrachtet deshalb nicht nur den Anbau, sondern die ganze Kette. </p>
@@ -56,9 +58,9 @@ Schritte und alle Menschen, die daran beteiligt sind:</p>
   <div class="zahl"><strong>2 von 3</strong>
     <p>Teilen dieser Umweltbelastung entstehen im Ausland, also dort, wo unsere importierten Lebensmittel und Futtermittel herkommen.</p>
     <small>Quelle: <a href="https://www.bafu.admin.ch/de/auswirkungen-der-ernaehrung-auf-die-umwelt">BAFU, Auswirkungen der Ernährung auf die Umwelt</a></small></div>
-  <div class="zahl"><strong>42&nbsp;%</strong>
+  <div class="zahl"><strong>45&nbsp;%</strong>
     <p>der Kalorien, die wir essen, produziert die Schweiz selbst (netto, 2024). Bei pflanzlichen Lebensmitteln waren es nur 31&nbsp;%.</p>
-    <small>Quelle: Agristat, via <a href="https://www.srf.ch/news/schweiz/ernaehrungsinitiative-selbstversorgungsgrad-kalorien-bestimmen-den-wert">SRF</a></small></div>
+    <small>Quelle: Agristat, via <a href="https://www.agrarbericht.ch/de/markt/marktentwicklungen/selbstversorungsgrad">Agrarbericht 2025F</a></small></div>
   <div class="zahl"><strong>2,8 Mio. t</strong>
     <p>Lebensmittel gehen wegen unseres Konsums jedes Jahr verloren. Vermeidbare Verluste verursachen rund einen Viertel der Umweltbelastung der Ernährung.</p>
     <small>Quelle: <a href="https://www.bafu.admin.ch/de/foodwaste">BAFU, Food Waste</a></small></div>
@@ -66,7 +68,7 @@ Schritte und alle Menschen, die daran beteiligt sind:</p>
     <p>Landwirtschaftsbetriebe gab es 2025 im Kanton Bern. Zehn Jahre zuvor waren es noch rund 1500 mehr.</p>
     <small>Quelle: <a href="https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/jahresbericht/2025/2025_Digitaler%20Jahresbericht%20LANAT%20-%20ADZ.pdf">LANAT Kanton Bern, Jahresbericht 2025</a></small></div>
   <div class="zahl"><strong>9500</strong>
-    <p>Höfe in der Schweiz verkaufen direkt an Konsumentinnen und Konsumenten, zum Beispiel im Hofladen oder auf dem Markt (2023).</p>
+    <p>.</p>
     <small>Quelle: <a href="https://dam-api.bfs.admin.ch/hub/api/dam/assets/36632459/master">BFS, Taschenstatistik Landwirtschaft 2026</a></small></div>
 </div>
 
