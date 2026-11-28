@@ -164,3 +164,8 @@ footer {
 }
 
 .kasten p { margin: 0.4rem 0 0; }
+
+/* Bilder auf allen Seiten */
+figure{margin:1rem 0}
+figure img{width:100%;height:auto;border-radius:10px;display:block}
+figcaption{font-size:.85rem;color:var(--erde-hell);margin-top:.3rem}
